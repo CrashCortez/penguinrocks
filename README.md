@@ -19,6 +19,11 @@ This script was passed along to me by a third party, after checking it over and 
  - wget or curl
 ```
 sudo apt-get install perl curl wget
+sudo apt-get install libdigest-perl-md5-perl libxml-simple-perl libgetopt-long-descriptive-perl
+```
+#or
+```
+sudo apt-get install perl curl wget
 sudo curl -L http://cpanmin.us | perl - --sudo App::cpanminus
 sudo cpanm Digest::MD5
 sudo cpanm File::Copy
