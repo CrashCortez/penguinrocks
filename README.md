@@ -17,7 +17,15 @@ This script was passed along to me by a third party, after checking it over and 
    - Getopt::Long
    - XML::Simple
  - wget or curl
-
+```
+sudo apt-get install perl curl wget
+sudo curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+sudo cpanm Digest::MD5
+sudo cpanm File::Copy
+sudo cpanm File::Path
+sudo cpanm Getopt::Long
+sudo cpanm XML::Simple
+```
 While this tool is primarily for Linux & other UNIX-likes, it should also work on the Windows command line with Perl installed (e.g. via [Strawberry Perl](http://strawberryperl.com/)).
 
 ## Installation and usage
