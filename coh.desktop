@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=City of Heroes
+GenericName=CoH
+Comment=Linux x86 Client
+Icon=/home/pi/Games/coh/coh.png
+Exec=/home/pi/Games/coh/launchcoh.sh
+Actions=
+Categories=Game;
+Keywords=Emulator;
+Path=
+Terminal=false
+StartupNotify=false
