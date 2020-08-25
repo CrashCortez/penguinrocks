@@ -356,7 +356,7 @@ sub LaunchCoh
 
 	if(-x "/home/pi/wine/bin/")
 	{
-		$command = "wine ${exe} ${params} " . join(" ", @args);
+		$command = "LD_LIBRARY_PATH=/home/pi/mesa/lib/arm-linux-gnueabihf setarch linux32 -L wine ${exe} ${params} " . join(" ", @args);
 	else
 	{
 		die "Custum box86/wine not detected";
