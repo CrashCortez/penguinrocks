@@ -354,21 +354,12 @@ sub LaunchCoh
 		die "Profile #$profile doesn't exist in the given manifest.\n";
 	}
 
-	if(-x "/opt/cxgames/bin/wine")
-	{
-		$command = "/opt/cxgames/bin/wine --cx-app ${exe} ${params} " . join(" ", @args);
-	}
-	elsif(-x "$ENV{HOME}/cxgames/bin/wine")
-	{
-		$command = "~/cxgames/bin/wine --cx-app ${exe} ${params} " . join(" ", @args);
-	}
-	elsif($OSNAME eq 'MSWin32')
-	{
-		$command = "$exe " . join(" ", @args);
-	}
-	else
+	if(-x "/home/pi/wine/bin/")
 	{
 		$command = "wine ${exe} ${params} " . join(" ", @args);
+	else
+	{
+		die "Custum box86/wine not detected";
 	}
 	$command .= " >/dev/null 2>&1" if($silent_launch);
 	exec($command);
